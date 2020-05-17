@@ -1,0 +1,32 @@
+body{
+    min-height: 80vh;
+}
+.bg-company-red {
+    background-color: darkred !important;
+}
+
+.control-bar{
+    background-color: #000;
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+
+.summary-info{
+    color: white;
+}
+
+#listResultsDiv{
+    height: calc(85vh - 10px);
+    overflow-y: scroll;
+}
+
+#center-area{
+    height: calc(80h - 10px);
+    overflow-y: scroll;
+}
+
+ 
+
+.list-group > li{
+    list-style: none;
+}

@@ -1,0 +1,38 @@
+{
+  "name": "socketio-basic-demo",
+  "version": "1.0.0",
+  "description": "Demo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jawadhasan/socketio-basic-Demo.git"
+  },
+  "author": "Jawad Hasan Shani",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jawadhasan/socketio-basic-Demo/issues"
+  },
+  "homepage": "https://github.com/jawadhasan/socketio-basic-Demo#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.4"
+  },
+  "nodemonConfig": {
+    "restartable": "rs",
+    "ignore": [
+      "db.json",
+      "test/*",
+      "docs/*",
+      "node_modules/**/node_modules"
+    ],
+    "delay": "2500",
+    "env": {
+      "NODE_ENV": "development",
+      "PORT": 4000
+    }
+  }
+}
