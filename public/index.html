@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <base href="/">
+ 
   <title></title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
@@ -15,9 +15,7 @@
   <!-- Libs -->
   <script type="text/javascript" src="/lib/jquery.js"></script>
   <script type="text/javascript" src="/lib/bootstrap.bundle.js"></script>
-
-
-
+  
 </head>
 
 <body>
@@ -84,9 +82,27 @@
 
   </script>
 
+    <!-- this file is automatically exposed by socket.io server, for more info see
+    under node_modules=>socket.io.client=>readme .  -->
+
+    <script src="/socket.io/socket.io.js"></script>    
+    <script>
+      // set a variable for our socket and pass-in our server location 
+      const socket = io('http://localhost:4000');
+
+      //Notice the API is same for client as for server
+      socket.on('message-from-server', function(msg) {
+        console.log(msg.greeting);
+      });
+
+      socket.emit('message-from-client',{
+        greeting: "Hello from client."
+      });
+
+    </script>
 
 
-  <script type="text/javascript" src="app.js"></script>
+    <script type="text/javascript" src="app.js"></script>
 
 </body>
 
